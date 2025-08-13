@@ -10,12 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <!-- <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fas fa-sun" id="themeIcon"></i>
+    </div> -->
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span style="font-size: 1.5rem; font-weight: bold;">Pratibha IT Solutions</span>
-            </a>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
+            <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
+                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+            </div>
+        </a>
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -602,6 +611,11 @@
     <style>
         .tech-rating {
             margin: 0.5rem 0;
+        }
+        .tech-logo {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
         }
         
         .star {
