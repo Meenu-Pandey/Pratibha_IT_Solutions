@@ -408,29 +408,56 @@
             });
 
             // Handle form submission
-            applicationForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show success message
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Application Submitted!';
-                submitBtn.classList.add('success');
-                
+        applicationForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Create FormData object
+          const formData = new FormData(this);
+
+          // Show loading state
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = "Submitting...";
+          submitBtn.disabled = true;
+
+          // Send data to server
+          fetch("contact-form/submit_application.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                submitBtn.textContent = "Application Submitted!";
+                submitBtn.classList.add("success");
+
                 // Reset form and close modal after delay
                 setTimeout(() => {
-                    this.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.classList.remove('success');
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                    
-                    // Show notification
-                    if (typeof showNotification === 'function') {
-                        showNotification('Application submitted successfully! We\'ll get back to you soon.', 'success');
-                    }
+                  this.reset();
+                  submitBtn.textContent = originalText;
+                  submitBtn.classList.remove("success");
+                  submitBtn.disabled = false;
+                  modal.style.display = "none";
+                  document.body.style.overflow = "auto";
+
+                  // Show notification
+                  if (typeof showNotification === "function") {
+                    showNotification(data.message, "success");
+                  }
                 }, 2000);
+              } else {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                alert(data.message || "An error occurred. Please try again.");
+              }
+            })
+            .catch((error) => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              alert("An error occurred. Please try again.");
+              console.error("Error:", error);
             });
+        });
         });
     </script>
 </body>
