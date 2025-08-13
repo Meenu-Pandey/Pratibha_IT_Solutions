@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParallaxEffects();
     initTypingEffect();
     initParticleEffects();
+    initThemeToggle(); // Add theme toggle initialization
 });
 
 // Navigation functionality
@@ -50,24 +51,22 @@ function initNavigation() {
 }
 
 // Mobile menu functionality
-// function initMobileMenu() {
-//     const hamburger = document.querySelector('.hamburger');
-//     const navLinks = document.querySelector('.nav-links');
-    
-//     if (hamburger && navLinks) {
-//         hamburger.addEventListener('click', () => {
-//             hamburger.classList.toggle('active');
-//             navLinks.classList.toggle('active');
+function initMobileMenu() {
+    const heroContent = document.querySelector('.hero-content');
+
+    if (heroContent) {
+        heroContent.addEventListener('click', () => {
+            heroContent.classList.toggle('active');
             
-//             // Add animation to menu items
-//             const links = navLinks.querySelectorAll('a');
-//             links.forEach((link, index) => {
-//                 link.style.animationDelay = `${index * 0.1}s`;
-//                 link.classList.add('slide-in-left');
-//             });
-//         });
-//     }
-// }
+            // Add animation to menu items
+            const contentLinks = heroContent.querySelectorAll('a');
+            contentLinks.forEach((link, index) => {
+                link.style.animationDelay = `${index * 0.1}s`;
+                link.classList.add('slide-in-left');
+            });
+        });
+    }
+}
 
 // Smooth scrolling for anchor links
 function initSmoothScrolling() {
@@ -455,3 +454,72 @@ window.addEventListener('load', () => {
     // Initialize any remaining animations
     initScrollEffects();
 });
+
+// Theme Toggle Functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    
+    if (!themeToggle || !themeIcon) {
+        return;
+    }
+    
+    // Check for saved theme preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark' ;
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    // Add click event listener
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Update theme
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update icon
+        updateThemeIcon(newTheme);
+        
+        // Add animation effect
+        themeToggle.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
+}
+
+function updateThemeIcon(theme) {
+    const themeIcon = document.getElementById('themeIcon');
+    
+    if (!themeIcon) {
+        return;
+    }
+    
+    if (theme === 'light') {
+        themeIcon.className = 'fas fa-moon';
+        themeIcon.style.color = '#733E24'; // Medium brown
+    } else {
+        themeIcon.className = 'fas fa-sun';
+        themeIcon.style.color = '#fbbf24'; // Original accent color for dark theme
+    }
+}
+
+// Function to apply theme to other pages
+function applyThemeToPage() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Update theme toggle icon if it exists on the page
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+        updateThemeIcon(savedTheme);
+    }
+}
+
+// Apply theme when page loads (for other pages)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyThemeToPage);
+} else {
+    applyThemeToPage();
+}
