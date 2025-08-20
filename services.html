@@ -47,10 +47,17 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="section-container">
-            <h1>Our Services</h1>
-            <p>Comprehensive digital solutions to accelerate your business growth and digital transformation</p>
+    <section class="page-header" style="position: relative; text-align: center; padding: 100px 20px; color: #fff;">
+        <!-- Background Image -->
+        <img src="assets/images/web.jpg" alt="web" 
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: 1;">
+
+        <!-- Text Content -->
+        <div class="section-container" style="position: relative; z-index: 2;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Our Services</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                Comprehensive digital solutions to accelerate your business growth and digital transformation
+            </p>
         </div>
     </section>
     <!-- Services Section -->
@@ -94,7 +101,6 @@
                     </div>
                     <h3>Custom Software</h3>
                     <p>Tailored software solutions designed to solve your specific business challenges.</p>
-                    <!-- <a href="custom-software.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
                     <a href="custom-software.html" class="btn btn-primary">Learn More</a>
                 </div>
                 
@@ -104,8 +110,7 @@
                     </div>
                     <h3>Digital Marketing</h3>
                     <p>Strategic digital marketing campaigns to boost your online presence and ROI.</p>
-                    <!-- <a href="digital-marketing.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <a href="services.html" class="btn btn-primary">Learn More</a>
+                    <a href="digital-marketing.html" class="btn btn-primary">Learn More</a>
                 </div>
                 
                 <div class="service-card">
@@ -114,8 +119,7 @@
                     </div>
                     <h3>Cybersecurity</h3>
                     <p>Comprehensive security solutions to protect your digital assets and data.</p>
-                    <!-- <a href="cybersecurity.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <a href="services.html" class="btn btn-primary">Learn More</a>
+                    <a href="cybersecurity.html" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
             <br>
@@ -167,6 +171,13 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+    <div class="culture-image" style="text-align: center; margin: 30px;">
+        <div class="image-placeholder" style="display: inline-block;">
+            <img src="assets/images/team.jpg" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
+        </div>
+    </div>
     </section>
 
     <!-- Process Section -->
@@ -229,6 +240,25 @@
             <a href="contact.html" class="btn btn-accent">Get Free Consultation</a>
         </div>
     </section>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <div class="fab-main" id="fabMain">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="fab-options" id="fabOptions">
+            <a href="tel:+918596069160" class="fab-option" data-tooltip="Call Us">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/918596069160" class="fab-option" data-tooltip="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:info@pratibhait.in" class="fab-option" data-tooltip="Contact">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

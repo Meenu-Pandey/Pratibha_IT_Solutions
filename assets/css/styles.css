@@ -672,17 +672,109 @@ p {
     border: 1px solid var(--border-color);
 }
 
+/* Floating Action Button */
+/* FAB Container */
+.fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Main FAB Button */
+.fab-main {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fab-main:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+/* Options Container */
+.fab-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.fab-container.active .fab-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Each Option */
+.fab-option {
+    background: #222;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    margin: 10px 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+    transition: background 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.fab-option:hover {
+    background: #444;
+    transform: scale(1.1);
+}
+
+/* Tooltip */
+.fab-option::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 70px;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+.fab-option:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* Services Section */
-.services {
-    padding: 6rem 2rem;
-    background: var(--bg-primary);
-}
+
+.services { padding: 6rem 2rem; background: var(--bg-primary); }
 
 .services-container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .section-header {
     text-align: center;
