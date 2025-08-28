@@ -6,38 +6,44 @@
 }
 
 :root {
-    /* Dark Theme Colors */
-    --primary-color: #3b82f6;
-    --secondary-color: #1d4ed8;
-    --accent-color: #f59e0b;
-    --accent-hover: #fbbf24;
-    
-    /* Dark Background Colors */
-    --bg-primary: #1e2d51;
-    --bg-secondary: #2a3a52;
-    --bg-tertiary: #334155;
-    --bg-card: #455b80;
-    --bg-navbar: rgba(26, 40, 70, 0.95);
-    --bg-navbar-scrolled: rgba(15, 23, 42, 0.98);
-    
-    /* Text Colors */
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-    --text-accent: #fbbf24;
-    
-    /* Border and Shadow Colors */
-    --border-color: #334155;
-    --border-light: #475569;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
-    --shadow-accent: 0 0 20px rgba(245, 158, 11, 0.3);
-    
-    /* Transitions */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+/* Light Theme (Soft Neutral Background) */
+
+/* Primary + Secondary */
+--primary-color: #2563eb;        /* Blue (trustworthy) */
+--secondary-color: #1e40af;      /* Darker Blue */
+
+/* Accent */
+--accent-color: #020e45;         /* Vibrant Orange */
+--accent-hover: #130cea;         /* Darker Orange */
+
+/* Backgrounds */
+--bg-primary: #f4f5f7;           /* Soft gray-beige (NOT white) */
+--bg-secondary: #eaeef3;         /* Subtle bluish-gray */
+--bg-tertiary: #dde3eb;          /* Deeper soft tone */
+--bg-card: #ffffff;              /* Cards stay white for contrast */
+--bg-navbar: rgba(244, 245, 247, 0.95);
+--bg-navbar-scrolled: rgba(229, 231, 235, 0.98);
+
+/* Text */
+--text-primary: #1f2937;         /* Dark Gray */
+--text-secondary: #374151;       /* Muted Gray */
+--text-muted: #6b7280;           /* Lighter gray */
+--text-accent: #ea580c;          /* Accent orange text */
+
+/* Borders + Shadows */
+--border-color: #d1d5db;
+--border-light: #e5e7eb;
+--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+--shadow-glow: 0 0 20px rgba(37, 99, 235, 0.2);
+--shadow-accent: 0 0 20px rgba(249, 115, 22, 0.25);
+
+/* Transitions */
+--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+--transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+--transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 /* Theme transition for smooth switching */
