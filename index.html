@@ -6,376 +6,300 @@
     <title>Pratibha IT Solutions - Your Vision, Our Code</title>
     <meta name="description" content="Pratibha IT Solutions delivers digital excellence through innovative web development, mobile apps, and custom software solutions.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
-
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <!-- style="background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;" -->
     <!-- Hero Section -->
-    <section class="hero">
-            <!-- Blurred Background Image with Black Overlay -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-                filter: blur(1px); transform: scale(1.1);
-                z-index: 1;">
-    </div>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                background: rgba(113, 113, 113, 0.8); z-index: 2;">
-    </div>
-        <div class="hero-content">
-            <h1>Your Vision, Our Code — Digital Excellence Delivered</h1>
-            <p style="color: rgb(3, 13, 42);">Transform your business with cutting-edge technology solutions. We specialize in web development, mobile apps, and custom software that drives growth and innovation.</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
-                <a href="case-studies.html" class="btn btn-secondary">View Portfolio</a> 
-            </div> 
+    <section class="hero-section section-light">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('assets/images/hero-bg.jpg');">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Your Vision, Our Code — Digital Excellence Delivered</h1>
+                    <p style="color: ivory;">Transform your business with cutting-edge technology solutions. We specialize in web development, mobile apps, and custom software that drives growth and innovation.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn">Get Free Consultation</a>
+                        <a href="case-studies.html" class="btn">View Portfolio</a> 
+                    </div>
+                </div> 
+            </div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero-bg1.jpg');">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Drive Growth with Digital Marketing</h1>
+                    <p style="color: ivory;">Elevate your brand with strategic SEO, social media, and content marketing services designed for measurable results.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn">Get Free Consultation</a>
+                        <a href="digital-marketing.html" class="btn">Learn More</a> 
+                    </div> 
+                </div> 
+            </div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero-bg2.jpg');">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Secure Your Digital Future</h1>
+                    <p style="color: ivory;">Protect your business from evolving cyber threats with our comprehensive cybersecurity solutions and expert guidance.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn">Get Free Consultation</a>
+                        <a href="cybersecurity.html" class="btn">Learn More</a> 
+                    </div> 
+                </div> 
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide-index="0"></span>
+                <span class="dot" data-slide-index="1"></span>
+                <span class="dot" data-slide-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section section-dark">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>8</h3>
+                    <p style="color: lightgrey;">Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3>150</h3>
+                    <p style="color: lightgrey;">Projects Delivered</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p style="color: lightgrey;">Client Retention</p>
+                </div>
+                <div class="stat-card">
+                    <h3>25</h3>
+                    <p style="color: lightgrey;">Industries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Card Slider) -->
+    <section class="services-section section-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="text-align: center; font-size: 2rem; font-weight: bolder;">OUR SERVICES</h2>
+                <p style="text-align: center; ">Comprehensive digital solutions to accelerate your business growth</p>
+            </div>
+            <div class="services-slider-wrapper">
+                <div class="services-slider">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Crafting stunning and functional websites tailored to your business needs, ensuring a powerful online presence.</p>
+                        <a href="web-development.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Development</h3>
+                        <p>Building intuitive and high-performance mobile applications for iOS and Android, driving engagement and growth.</p>
+                        <a href="mobile-development.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Implementing scalable and secure cloud strategies to optimize your infrastructure and enhance operational efficiency.</p>
+                        <a href="cloud-solutions.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Custom Software</h3>
+                        <p>Developing bespoke software solutions designed to streamline your unique business processes and give you a competitive edge.</p>
+                        <a href="custom-software.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Digital Marketing</h3>
+                        <p>Driving online visibility and customer engagement through data-driven SEO, social media, and content marketing strategies.</p>
+                        <a href="digital-marketing.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Cybersecurity</h3>
+                        <p>Protecting your critical assets with advanced cybersecurity measures, ensuring data integrity and business continuity.</p>
+                        <a href="cybersecurity.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="service-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="service-dots"></div>
+                    <button class="service-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <br>
+                <div class="btn-container">
+                    <a href="services.html" class="btn">View All Services</a>
+                </div>
+
+            </div>
         </div> 
     </section>
 
-    <!-- <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/front-page.png" alt="front-page" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Pratibha IT Solutions - Your Partner in Digital Transformation</p>
-        </div>
-    </div>
-    </section> -->
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-number" data-target="8">8</div>
-                <div class="stat-label">Years Experience</div>
+    <!-- Why Choose Us / Values -->
+    <section class="why-choose-us-section section-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: whitesmoke; font-size: 2rem; font-weight: bolder;">WHY CHOOSE US</h2>
+                <p style="color: lightgrey;">We're committed to delivering exceptional results through innovation and partnership</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="150">150</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="98">98</div>
-                <div class="stat-label">Client Retention %</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="25">25</div>
-                <div class="stat-label">Industries Served</div>
+            
+            <div class="why-choose-us-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Innovation</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Cutting-edge solutions using the latest technologies and industry best practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Transparency</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Clear communication, regular updates, and complete visibility into project progress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Long-term Partnership</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Building lasting relationships through trust, reliability, and continuous support.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Preview Section -->
-    <section class="services">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive digital solutions to accelerate your business growth</p>
+    <!-- Technologies Section (Infinite Logo Loop) -->
+    <section class="technologies-section section-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="text-align: center; font-size: 2rem; font-weight: bold;">Technologies We Master</h2>
+                <p style="text-align: center;">Cutting-edge tools and frameworks for modern development</p>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card" href="web-development.html">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built with modern technologies and best practices.</p>
-                    <!-- <a href="web-development.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <a href="web-development.html" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile Development</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android platforms.</p>
-                    <!-- <a href="mobile-development.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <a href="mobile-development.html" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services for modern businesses.</p>
-                    <!-- <a href="cloud-solutions.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <a href="cloud-solutions.html" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Custom Software</h3>
-                    <p>Tailored software solutions designed to solve your specific business challenges.</p>
-                    <a href="custom-software.html" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategic digital marketing campaigns to boost your online presence and ROI.</p>
-                    <a href="digital-marketing.html" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and data.</p>
-                    <a href="cybersecurity.html" class="btn btn-primary">Learn More</a>
-                </div>
+            <div class="logo-marquee">
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+                <!-- Duplicate for infinite loop effect -->
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
             </div>
             <br>
             <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
+                <a href="technologies.html" class="btn">Explore All Technologies</a>
             </div>
         </div>
     </section>
-
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/team.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Our team of experts collaborating to deliver innovative solutions</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="values">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Why Choose Us</h2>
-                <p>We're committed to delivering exceptional results through innovation and partnership</p>
+    <!-- Case Studies -->
+    <section class="case-studies-section section-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: whitesmoke; font-size: 2rem; font-weight: bolder;">SUCCESS STORIES</h2>
+                <p style="color: lightgrey;">Discover how we've helped businesses transform their digital presence</p>
             </div>
             
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation</h3>
-                    <p>Cutting-edge solutions using the latest technologies and industry best practices.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Transparency</h3>
-                    <p>Clear communication, regular updates, and complete visibility into project progress.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-target"></i>
-                    </div>
-                    <h3>Results-Driven</h3>
-                    <p>Focus on measurable outcomes and business value, not just technical delivery.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Long-term Partnership</h3>
-                    <p>Building lasting relationships through trust, reliability, and continuous support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/project-img.png" alt="front-page" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Our team of experts collaborating to deliver innovative solutions</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Case Studies Preview Section -->
-    <section class="case-studies">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>Discover how we've helped businesses transform their digital presence</p>
-            </div>
-            
-            <div class="case-grid">
-                <div class="case-card">
-                    <div class="case-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="case-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>Built a scalable e-commerce solution that increased online sales by 300% for a retail client.</p>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <div class="case-image">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <div class="case-content">
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6PBjNt-pnq6UuP-wjTJIYaQmaMkyp2VIndEwESy0v8gP8VSW6ApfNJ8YpoE3mIvH70Xk&usqp=CAU" alt="Healthcare Management System">
+                    <div class="case-study-overlay">
                         <h3>Healthcare Management System</h3>
                         <p>Developed a comprehensive patient management system improving efficiency by 40%.</p>
+                        <a href="#" class="btn">View Case Study</a>
                     </div>
                 </div>
-                
-                <div class="case-card">
-                    <div class="case-image">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="case-content">
+                <div class="case-study-card">
+                    <img src="https://media.istockphoto.com/id/1408368183/photo/lms-learning-management-system-for-lesson-and-online-education-course-application-study-e.jpg?s=612x612&w=0&k=20&c=ZiEtEhRcVk8EUVM8ZHvZOYwYRjNIeH_-4YN_38aBBx0=" alt="Learning Management Platform">
+                    <div class="case-study-overlay">
                         <h3>Learning Management Platform</h3>
                         <p>Created an interactive LMS serving 10,000+ students with 95% satisfaction rate.</p>
+                        <a href="#" class="btn">View Case Study</a>
                     </div>
                 </div>
-                
-                <div class="case-card">
-                    <div class="case-image">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <div class="case-content">
+                <div class="case-study-card">
+                    <img src="https://images.unsplash.com/photo-1610891015188-5369212db097?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hbnVmYWN0dXJpbmd8ZW58MHx8MHx8fDA%3D" alt="Manufacturing Analytics">
+                    <div class="case-study-overlay">
                         <h3>Manufacturing Analytics</h3>
                         <p>IoT-powered analytics dashboard reducing production costs by 25% for manufacturing client.</p>
+                        <a href="#" class="btn">View Case Study</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-4">
-                <a href="case-studies.html" class="btn btn-primary">View All Case Studies</a>
-            </div>
-        </div>
-    </section>
-
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/devops-cloud.png" alt="DevOps and Cloud Solutions" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Empowering businesses with DevOps and Cloud Solutions for seamless operations</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section class="technologies">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Technologies We Master</h2>
-                <p>Cutting-edge tools and frameworks for modern development</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <p>React</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <p>Node.js</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <p>Python</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <p>AWS</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <p>Docker</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-angular"></i>
-                    </div>
-                    <p>Angular</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-vue-js"></i>
-                    </div>
-                    <p>Vue.js</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-laravel"></i>
-                    </div>
-                    <p>Laravel</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="technologies.html" class="btn btn-secondary">Explore All Technologies</a>
+            <br>
+            <div class="text-center mt-4" style="text-align: right;">
+                <a href="case-studies.html" class="btn">View All Case Studies</a>
             </div>
         </div>
     </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta">
-        <div class="section-container">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's discuss how we can help transform your business with innovative technology solutions.</p>
-            <a href="contact.html" class="btn btn-accent">Get in Touch</a>
-        </div>
-    </section>
-
     <!-- Floating Action Button -->
     <div class="fab-container">
         <div class="fab-main" id="fabMain">
@@ -395,56 +319,40 @@
         </div>
     </div>
 
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section section-light">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <!-- <p>Let's discuss how we can help transform your business with innovative technology solutions.</p> -->
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i>+918596069160</p>
-                <p><i class="fas fa-envelope"></i><br>info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>

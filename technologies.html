@@ -3,606 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologies - Pratibha IT Solutions</title>
-    <meta name="description" content="Explore our technology expertise across frontend, backend, mobile, cloud, and emerging technologies.">
+    <title>Technologies</title>
+    <meta name="description" content="Pratibha IT Solutions delivers digital excellence through innovative web development, mobile apps, and custom software solutions.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <style>
+    /* ===== Hero Section ===== */
+    .hero-tech {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: url('assets/images/tech-hero-bg.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+    .hero-tech h1 {
+      font-size: 2.5rem;
+      color: #181717;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .hero-tech p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* ===== Infinite Logo Carousel ===== */
+    .tech-carousel {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin: 40px 0;
+    }
+    .tech-track {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+    .tech-logo {
+      display: inline-block;
+      margin: 0 40px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+    .tech-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===== Tabs ===== */
+    .tabs {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background: #eee;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 500;
+      outline: none;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #007bff;
+      color: #fff;
+    }
+
+    /* ===== Tech Grid ===== */
+    .tech-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      margin: 20px auto 60px;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+    .tech-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: grid; font-size: 4rem;
+    }
+    .tech-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .tech-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .tech-card p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f1f5fb;
+    }
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                  <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                  <div class="dropdown-content">
+                      <a href="web-development.html">Web Development</a>
+                      <a href="mobile-development.html">Mobile Development</a>
+                      <a href="cloud-solutions.html">Cloud Solutions</a>
+                      <a href="custom-software.html">Custom Software</a>
+                      <a href="digital-marketing.html">Digital Marketing</a>
+                      <a href="cybersecurity.html">Cybersecurity</a>
+                  </div>
+              </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="section-container">
-            <h1>Technologies We Master</h1>
-            <p>Cutting-edge tools, frameworks, and platforms that power our innovative solutions</p>
-        </div>
-    </section>
-
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/frontend-img.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Empowering businesses with innovative web solutions that drive growth and success</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Frontend Technologies -->
-    <section class="technologies">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Frontend Technologies</h2>
-                <p>Modern frameworks and libraries for creating exceptional user experiences</p>
+  <!-- Hero Section -->
+    <section class="technologies-section section-light" style="margin-top: 150px; background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="text-align: center; font-size: 3rem; font-weight: bold; color: #eee;">Technologies We Master</h2>
+                <p style="text-align: center; color: #ddd; font-size: 1.5rem;">Cutting-edge tools and frameworks for modern development</p>
             </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <p>React</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Component-based UI library for building scalable applications</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-angular"></i>
-                    </div>
-                    <p>Angular</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Full-featured framework for enterprise applications</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-vue-js"></i>
-                    </div>
-                    <p>Vue.js</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Progressive framework for building user interfaces</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <p>JavaScript ES6+</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Modern JavaScript with advanced features and syntax</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <p>HTML5</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Semantic markup and modern web standards</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <p>CSS3 & SASS</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Advanced styling with preprocessors and animations</p>
-                </div>
+            <div class="logo-marquee">
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+                <!-- Duplicate for infinite loop effect -->
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
             </div>
+            <br>
         </div>
     </section>
 
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/backend-img.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Building robust server-side solutions for scalable and secure applications</p>
-        </div>
-    </div>
-    </section>
+  <!-- Category Tabs -->
+  <section class="tabs">
+    <button class="tab-btn active" onclick="openTab('frontend')">Frontend</button>
+    <button class="tab-btn" onclick="openTab('backend')">Backend</button>
+    <button class="tab-btn" onclick="openTab('mobile')">Mobile</button>
+    <button class="tab-btn" onclick="openTab('cloud')">Cloud</button>
+    <button class="tab-btn" onclick="openTab('databases')">Databases</button>
+    <button class="tab-btn" onclick="openTab('emerging')">Emerging Tech</button>
+  </section>
 
-    <!-- Backend Technologies -->
-    <section class="values">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Backend Technologies</h2>
-                <p>Robust server-side solutions for scalable and secure applications</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <p>Node.js</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">JavaScript runtime for server-side development</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <p>Python</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Versatile language for web apps and data science</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <p>PHP</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Server-side scripting for dynamic web applications</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <p>Java</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Enterprise-grade applications and microservices</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-laravel"></i>
-                    </div>
-                    <p>Laravel</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Elegant PHP framework for web artisans</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-django"></i>
-                    </div>
-                    <p>Django</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">High-level Python web framework</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Category Grids -->
+  <div id="frontend" class="tech-grid">
+    <div class="tech-card"><i class="fab fa-react"></i><p>React</p></div>
+    <div class="tech-card"><i class="fab fa-angular"></i><p>Angular</p></div>
+    <div class="tech-card"><i class="fab fa-vuejs"></i><p>Vue.js</p></div>
+  </div>
 
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/mobile-img.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Mobile Development</p>
-        </div>
-    </div>
-    </section>
+  <div id="backend" class="tech-grid">
+    <div class="tech-card"><i class="fab fa-node-js"></i><p>Node.js</p></div>
+    <div class="tech-card"><i class="fab fa-python"></i><p>Python</p></div>
+    <div class="tech-card"><i class="fab fa-java"></i><p>Java</p></div>
+  </div>
 
-    <!-- Mobile Technologies -->
-    <section class="technologies">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Mobile Development</h2>
-                <p>Cross-platform and native solutions for iOS and Android</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <p>React Native</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Cross-platform mobile app development</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-swift"></i>
-                    </div>
-                    <p>Swift</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Modern iOS development language</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-android"></i>
-                    </div>
-                    <p>Kotlin</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Modern Android development language</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-flutter"></i>
-                    </div>
-                    <p>Flutter</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Google's UI toolkit for cross-platform apps</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div id="mobile" class="tech-grid">
+    <div class="tech-card"><i class="fab fa-react"></i><p>React Native</p></div>
+  </div>
 
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/devops-cloud.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Cloud & DevOps</p>
-        </div>
-    </div>
-    </section>
+  <div id="cloud" class="tech-grid">
+    <div class="tech-card"><i class="fab fa-aws"></i><p>AWS</p></div>
+    <div class="tech-card"><i class="fab fa-docker"></i><p>Docker</p></div>
+  </div>
 
-    <!-- Cloud & DevOps -->
-    <section class="values">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Cloud & DevOps</h2>
-                <p>Scalable infrastructure and automated deployment solutions</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <p>AWS</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Leading cloud computing platform</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <p>Docker</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Containerization platform for applications</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-kubernetes"></i>
-                    </div>
-                    <p>Kubernetes</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Container orchestration platform</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-jenkins"></i>
-                    </div>
-                    <p>Jenkins</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Automation server for CI/CD pipelines</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div id="databases" class="tech-grid">
+    <div class="tech-card"><i class="fab fa-mongodb"></i><p>MongoDB</p></div>
+    <div class="tech-card"><i class="fab fa-mysql"></i><p>MySQL</p></div>
+  </div>
 
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/db-img.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Database Management</p>
-        </div>
-    </div>
-    </section>
+  <div id="emerging" class="tech-grid"">
+    <div class="tech-card"><i class="fab fa-artstation"></i><p>AI & ML</p></div>
+  </div>
 
-    <!-- Databases -->
-    <section class="technologies">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Databases & Storage</h2>
-                <p>Reliable data management solutions for modern applications</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>PostgreSQL</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Advanced open-source database</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>MongoDB</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">NoSQL document database</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>Redis</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">In-memory data structure store</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>MySQL</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                    <p class="tech-desc">Popular open-source RDBMS</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/emerging-tech.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Emerging Technologies</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Emerging Technologies -->
-    <section class="values">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Emerging Technologies</h2>
-                <p>Cutting-edge solutions for future-ready applications</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <p>Machine Learning</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">AI-powered predictive analytics</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-link"></i>
-                    </div>
-                    <p>Blockchain</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Distributed ledger technology</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <p>IoT</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Internet of Things solutions</p>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-vr-cardboard"></i>
-                    </div>
-                    <p>AR/VR</p>
-                    <div class="tech-rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="tech-desc">Immersive technology experiences</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta">
-        <div class="section-container">
-            <h2>Need a Specific Technology Solution?</h2>
-            <p>Our team has expertise in a wide range of technologies. Let's discuss your project requirements.</p>
-            <a href="contact.html" class="btn btn-accent">Get Free Consultation</a>
-        </div>
-    </section>
 
     <!-- Floating Action Button -->
     <div class="fab-container">
@@ -623,99 +271,54 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
+<!-- Contact CTA Section -->
+<section class="contact-cta-section section-light">
+    <div class="container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's discuss how we can help transform your business with innovative technology solutions.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Pratibha IT Solutions
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i> +918596069160</p>
-                <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-        
         <div class="footer-bottom">
             <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
 <script src="assets/js/main.js"></script>
 
 
+  <script>
+    function openTab(tabName) {
+      const tabs = document.querySelectorAll('.tech-grid');
+      const btns = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => tab.style.display = 'none');
+      btns.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabName).style.display = 'grid';
+      event.target.classList.add('active');
+    }
+  </script>
 
-    <style>
-        .tech-rating {
-            margin: 0.5rem 0;
-        }
-        .tech-logo {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .star {
-            color: #d1d5db;
-            font-size: 1.2rem;
-        }
-        
-        .star.filled {
-            color: var(--accent-color);
-        }
-        
-        .tech-desc {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-            line-height: 1.4;
-        }
-        
-        .tech-item {
-            background: var(--bg-white);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .tech-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-    </style>
-
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,517 @@
+/* services.css */
+
+/* Page-specific CSS variables (if any, otherwise use global from styles.css) */
+:root {
+    --primary-light: #5874ff; /* Example: Services page might have a slightly different primary tint */
+    --primary-dark: #8f65f2;
+}
+
+/* Page Header - Hero Section for Services Page */
+.page-header {
+    position: relative;
+    padding: 120px 20px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    background: url('../images/services-hero.png') no-repeat center center/cover; /* Fallback */
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); /* Dark overlay */
+    z-index: 1;
+}
+
+.page-header .section-container {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.services-grid .service-card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .services-grid .service-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.services-grid .service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    .services-grid .service-card:hover {
+        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.services-grid .service-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-light), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px rgba(var(--primary-light), 0.3); /* Subtle glow */
+    transition: all 0.4s ease;
+}
+
+.services-grid .service-card:hover .service-icon {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 0 8px rgba(var(--primary-light), 0.5); /* Intensify glow */
+}
+
+.services-grid h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color-dark);
+}
+
+.services-grid p {
+    font-size: 1rem;
+    color: var(--text-color-light);
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.services-grid .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius-sm);
+    background: linear-gradient(90deg, var(--secondary-light), var(--secondary-dark));
+}
+
+.services-grid .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for services grid */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+/* Technology Slider (Marquee) */
+.technology-slider-section {
+    overflow: hidden;
+    padding: 3rem 0;
+    background-color: var(--bg-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+    .technology-slider-section {
+        background-color: var(--bg-light);
+    }
+}
+
+.technology-marquee {
+    display: flex;
+    /* animation: marquee 30s linear infinite; */ /* Managed by JS for smoother infinite scroll */
+    white-space: nowrap;
+    padding: 1rem 0;
+    /* Ensure content can scroll */
+    width: max-content; /* Allow content to dictate width, enabling scroll */
+}
+
+.technology-marquee:hover {
+    /* animation-play-state: paused; */ /* Managed by JS */
+}
+
+.technology-card {
+    flex: 0 0 auto;
+    background-color: var(--card-bg-light);
+    border-radius: 50px; /* Pill shape */
+    padding: 0.8rem 2rem;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .technology-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-dark);
+}
+
+.technology-card img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.technology-card:hover img {
+    filter: grayscale(0%);
+}
+
+.technology-card span {
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+/* Adjust marquee animation to be handled by JS */
+/* @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); } 
+} */
+
+/* Process Section (Timeline Style) */
+.process-section {
+    padding: 5rem 0;
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.process-timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-light);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .process-timeline::after {
+        left: 25px;
+    }
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--primary-light);
+    border: 4px solid var(--primary-dark);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item-content {
+    padding: 20px 30px;
+    background-color: var(--card-bg-light);
+    position: relative;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    .timeline-item-content {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.timeline-item-content h3 {
+    color: var(--primary-light);
+}
+
+/* Right-aligned timeline items */
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.right::after {
+    left: -17px;
+}
+
+/* Media queries for process section */
+@media (max-width: 768px) {
+    .process-timeline {
+        padding: 0 0 0 60px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.right {
+        left: 0%;
+    }
+
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 18px;
+    }
+
+    .timeline-item-content {
+        margin-left: 0px;
+    }
+}
+
+/* Specialized Solutions & Culture Image */
+.specialized-solutions-section .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.specialized-solutions-section .value-card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    .specialized-solutions-section .value-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.specialized-solutions-section .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-light), var(--primary-dark));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.specialized-solutions-section .value-card:hover::before {
+    opacity: 1;
+}
+
+.specialized-solutions-section .value-card .value-icon,
+.specialized-solutions-section .value-card h3,
+.specialized-solutions-section .value-card p {
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.specialized-solutions-section .value-card:hover .value-icon,
+.specialized-solutions-section .value-card:hover h3,
+.specialized-solutions-section .value-card:hover p {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.specialized-solutions-section .value-icon {
+    font-size: 3rem;
+    color: var(--primary-light);
+    margin-bottom: 1rem;
+}
+
+.specialized-solutions-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color-dark);
+}
+
+.specialized-solutions-section p {
+    font-size: 1rem;
+    color: var(--text-color-light);
+}
+
+/* Culture Image */
+.culture-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.culture-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    display: inline-block; /* To allow text below */
+}
+
+@media (prefers-color-scheme: dark) {
+    .culture-image img {
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.culture-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.culture-image p {
+    margin-top: 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--text-color-dark);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-color-dark);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for overall sections */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 0 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure technology cards stack or scroll correctly */
+    .technology-marquee {
+        /* overflow-x: scroll; */ /* Let the default overflow handle it if JS is managing */
+        /* white-space: nowrap; */ /* Keep for single line, but ensure container allows scroll */
+    }
+    
+    .technology-card {
+        margin: 0 0.5rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* Culture image responsiveness */
+    .culture-image img {
+        max-width: 100%;
+    }
+
+    .culture-image p {
+        font-size: 0.95rem;
+    }
+}

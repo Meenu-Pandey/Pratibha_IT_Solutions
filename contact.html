@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Pratibha IT Solutions</title>
     <meta name="description" content="Get in touch with Pratibha IT Solutions for your technology needs. Contact us for a free consultation.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
-            </div>
-        </a>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+                <div class="logo-text-container">
+                    <span class="logo-main">PRATIBHA</span>
+                    <span class="logo-sub">IT SOLUTIONS</span>
+                </div>
+            </a>
 
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
-      <div class="section-container">
-        <h1>Contact Us</h1>
-        <p>
-          Ready to start your project? Let's discuss how we can help transform
-          your business
-        </p>
-      </div>
+    <section class="page-header section-dark">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">Ready to start your project? Let's discuss how we can help transform your business</p>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="services">
-        <div class="section-container">
+    <section class="contact-section section-light">
+        <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
                     <h2>Get In Touch</h2>
@@ -68,7 +80,7 @@
                             </div>
                             <div>
                                 <h4>Address</h4>
-                                <p>19 , S.A.S.NAGAR (MOHALI), JANATA MARKET,PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
+                                <p>19 , S.A.S.NAGAR (MOHALI), JANATA MARKET,PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
                             </div>
                         </div>
                         
@@ -116,7 +128,7 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form class="contact-form">
+                    <form class="contact-form" action="contact-form/submit_form.php" method="POST">
                         <h3>Send us a Message</h3>
                         
                         <div class="form-row">
@@ -166,11 +178,11 @@
                             <label for="projectBudget">Project Budget</label>
                             <select id="projectBudget" name="projectBudget">
                                 <option value="">Select budget range</option>
-                                <option value="under-10k">Under $10,000</option>
-                                <option value="10k-25k">$10,000 - $25,000</option>
-                                <option value="25k-50k">$25,000 - $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="over-100k">Over $100,000</option>
+                                <option value="under-10k">Under 10,000</option>
+                                <option value="10k-25k">10,000 - 25,000</option>
+                                <option value="25k-50k">25,000 - 50,000</option>
+                                <option value="50k-100k">50,000 - 100,000</option>
+                                <option value="over-100k">Over 100,000</option>
                                 <option value="not-sure">Not sure yet</option>
                             </select>
                         </div>
@@ -195,39 +207,28 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="values">
-      <div class="section-container">
-        <div class="section-header">
-          <h2>Find Us</h2>
-          <p>Visit our office or connect with us remotely</p>
-        </div>
-
+        <!-- Map Section -->
         <div class="map-container">
           <div class="map-placeholder">
             <i class="fas fa-map-marked-alt"></i>
+            <h3>Location</h3>
             <p>
               Our office is located in the heart of Digital City's tech
               district, easily accessible by public transportation and major
               highways.
             </p>
             <a href="https://maps.app.goo.gl/a3GnKM8b1h416eRcA" class="btn btn-secondary">Get Directions</a>
-            <p>
-              <strong>Address:</strong> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059
+            <p class="address-info">
+              <strong>Address:</strong> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059
             </p>
           </div>
         </div>
-      </div>
-    </section>
+
 
     <!-- FAQ Section -->
-    <section class="case-studies">
-      <div class="section-container">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-          <p>Quick answers to common questions about our services</p>
-          <img src="https://cdni.iconscout.com/illustration/premium/thumb/faq-4515508-3749048.png" alt="FAQ Illustration" height="200" width="300">
-        </div>
+    <section class="faq-section section-light">
+      <div class="container">
+        <h2 class="section-title" style="color: rgb(4, 65, 82); text-align: center;">FAQs</h2>
         <div class="faq-grid">
           <div class="faq-item">
             <h3>What is your typical project timeline?</h3>
@@ -246,16 +247,6 @@
               improvements.
             </p>
           </div>
-
-          <div class="faq-item">
-            <h3>What industries do you specialize in?</h3>
-            <p>
-              We have experience across 25+ industries including healthcare,
-              finance, education, manufacturing, retail, and more. Our diverse
-              portfolio demonstrates our adaptability.
-            </p>
-          </div>
-
           <div class="faq-item">
             <h3>How do you ensure project quality?</h3>
             <p>
@@ -269,15 +260,12 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section class="contact-cta">
-      <div class="section-container">
-        <h2>Ready to Start Your Project?</h2>
-        <p>
-          Let's discuss how we can help transform your business with innovative
-          technology solutions.
-        </p>
-        <a href="#contact-form" class="btn btn-accent">Get Free Consultation</a>
-      </div>
+    <section class="contact-cta-section section-dark">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help transform your business with innovative technology solutions.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
     </section>
 
     <!-- Floating Action Button -->
@@ -301,238 +289,29 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Pratibha IT Solutions</h3>
-          <p>
-            Your trusted partner for innovative technology solutions that drive
-            business growth and digital transformation.
-          </p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="index.html">Home</a>
-          <br />
-          <a href="services.html">Services</a>
-          <br />
-          <a href="case-studies.html">Case Studies</a>
-          <br />
-          <a href="technologies.html">Technologies</a>
-          <br />
-          <a href="contact.html">Contact</a>
-          <br />
-        </div>
-
-        <div class="footer-section">
-          <h3>Services</h3>
-          <a href="web-development.html">Web Development</a><br />
-          <a href="mobile-development.html">Mobile Development</a><br />
-          <a href="cloud-solutions.html">Cloud Solutions</a><br />
-          <a href="custom-software.html">Custom Software</a><br />
-          <a href="services.html">Digital Marketing</a><br />
-        </div>
-
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059
-          </p>
-          <p><i class="fas fa-phone"></i> +918596069160</p>
-          <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
-      </div>
     </footer>
-
-    <style>
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-        
-        .contact-info h2 {
-            margin-bottom: 1rem;
-        }
-        
-        .contact-info > p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--bg-light);
-            border-radius: 0.5rem;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .contact-item h4 {
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-        
-        .contact-item p {
-            margin: 0;
-            line-height: 1.5;
-        }
-        
-        .social-links-contact h4 {
-            margin-bottom: 1rem;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .social-icon:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        
-        .contact-form-container {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
-        }
-        
-        .contact-form h3 {
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .btn-full {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .checkbox-label {
-            display: flex;
-            align-items: flex-start;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .checkbox-label input[type="checkbox"] {
-            margin-right: 0.5rem;
-            margin-top: 0.2rem;
-        }
-        
-        .map-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .map-placeholder {
-            background: var(--bg-light);
-            padding: 3rem;
-            text-align: center;
-            border-radius: 1rem;
-            border: 2px dashed var(--border-color);
-        }
-        
-        .map-placeholder i {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .map-placeholder h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .map-placeholder p {
-            margin-bottom: 2rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-        
-        .faq-item {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
-        }
-        
-        .faq-item h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        @media (max-width: 768px) {
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
+    
     <script src="assets/js/main.js"></script>
   </body>
 </html>

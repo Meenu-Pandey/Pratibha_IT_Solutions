@@ -4,332 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Services - Pratibha IT Solutions</title>
-    <meta name="description" content="Professional web development services including responsive design, e-commerce solutions, CMS development, and custom web applications.">
+    <meta name="description" content="Professional web development services for creating responsive and user-friendly websites.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
-    <!-- Page Header -->
-    <section class="page-header" style="position: relative; text-align: center; padding: 100px 20px; color: #fff;">
-        <!-- Background Image -->
-        <img src="assets/images/web.png" alt="web" 
-            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: 1;">
 
-        <!-- Text Content -->
-        <div class="section-container" style="position: relative; z-index: 2;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Web Development Services</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Transform your digital presence with cutting-edge web solutions that drive results
+<!-- Hero Section -->
+<!-- <section class="hero section-dark">
+  <div class="page-header container">
+    <h1>Mobile Development Services</h1>
+    <p>We craft powerful mobile apps that engage users and scale your business.</p>
+    <img src="assets/images/mobile-hero.png" alt="Mobile Apps" class="hero-img">
+  </div>
+</section> -->
+    <!-- Page Header -->
+    <section class="page-header" style="color: white;">
+        <div class="container text-center">
+            <h1 style="color: white;">Web Development Services</h1>
+            <p>
+                We craft powerful websites that engage users and scale your business.
             </p>
         </div>
     </section>
-    <br>
-<div class="sidebar" style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
+  <!-- Overview -->
+<section style="background: #ffffff; padding: 4rem 2rem; font-family: 'Inter', sans-serif;">
+  <div style="
+      max-width: 1100px; 
+      margin: auto; 
+      display: flex; 
+      align-items: center; 
+      gap: 3rem; 
+      flex-wrap: wrap;
+      flex-direction: row;
+    ">
     
-    <!-- Sidebar Menu -->
-    <div class="sidebar-content" style="flex: 1; min-width: 200px;">
-        <h3 style="text-align: center; margin-bottom: 1rem; color: var(--accent-color);">Services</h3>
-        <a href="web-development.html" class="active btn btn-secondary">Web Development</a>
-        <a href="mobile-development.html" class="btn btn-secondary">Mobile Development</a>
-        <a href="cloud-solutions.html" class="btn btn-secondary">Cloud Solutions</a>
-        <a href="custom-software.html" class="btn btn-secondary">Custom Software</a>
-        <a href="digital-marketing.html" class="btn btn-secondary">Digital Marketing</a>
-        <a href="cybersecurity.html" class="btn btn-secondary">Cybersecurity</a>
+    <!-- Right Text (comes first on mobile) -->
+    <div style="flex: 1; min-width: 280px; order: 1;">
+      <h2 style="font-size: 2.2rem; font-weight: 700; color: #222; margin-bottom: 1rem;">
+        Overview
+      </h2>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        At Pratibha IT Solutions, we craft modern, scalable, and visually stunning websites 
+        tailored to elevate your brand and enhance digital presence. 
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        Our web development expertise spans responsive websites, progressive web apps, 
+        and enterprise-grade solutions, ensuring seamless performance across devices and browsers. 
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        We work with cutting-edge technologies like React, Angular, Node.js, and cloud platforms 
+        to build secure, high-performing solutions that align with your business goals. 
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; text-align: justify;">
+        From startups to enterprises, our web solutions empower businesses with engaging user experiences, 
+        intuitive interfaces, and reliable architectures that drive growth and customer engagement. 
+      </p>
     </div>
     
-    <!-- Sidebar Image -->
-    <div style="flex: 1; text-align: center; min-width: 250px;">
-        <div class="culture-image">
-            <div class="image-placeholder" style="display: flex; flex-direction: column; align-items: center;">
-                <img src="assets/images/sidebar.png" alt="Sidebar Image" 
-                     style="max-width: 100%; height: auto; border-radius: 8px;">
-                <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Web Development</p>
-            </div>
-        </div>
+    <!-- Left Image (goes below text on mobile) -->
+    <div style="flex: 1; text-align: center; min-width: 280px; order: 2;">
+      <img src="assets/images/web.png" alt="Web Development Overview" 
+           style="border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); max-width: 100%; height: auto;">
     </div>
-</div>
+    
+  </div>
+</section>
 
-
-    <br>
-
-    <!-- Service Overview -->
-    <section class="services" style="padding-top: 4rem;">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Comprehensive Web Solutions</h2>
-                <p>From concept to deployment, we deliver exceptional web experiences that engage users and drive business growth</p>
+    <!-- Why Choose Us / Values -->
+    <section class="why-choose-us-section section-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: whitesmoke; font-size: 2rem; font-weight: bolder;">WHY CHOOSE US</h2>
+                <p style="color: lightgrey;">We're committed to delivering exceptional results through innovation and partnership</p>
             </div>
             
-            <div class="service-overview" style="background: var(--bg-card); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 4rem;">
-                <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 3rem; align-items: center;">
-                    <div>
-                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Why Choose Our Web Development?</h3>
-                        <ul style="color: var(--text-secondary); line-height: 1.8;">
-                            <li>✓ Modern, responsive design principles</li>
-                            <li>✓ SEO-optimized code structure</li>
-                            <li>✓ Fast loading and performance</li>
-                            <li>✓ Cross-browser compatibility</li>
-                            <li>✓ Scalable architecture</li>
-                            <li>✓ Ongoing support and maintenance</li>
-                        </ul>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 8rem; height: 8rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 3rem; color: white;">
-                            <i class="fas fa-globe"></i>
+            <div class="why-choose-us-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-desktop"></i></div>
+                            <h3>Web Applications</h3>
                         </div>
-                        <h4 style="color: var(--text-primary);">Full-Stack Development</h4>
-                        <p style="color: var(--text-secondary);">End-to-end web solutions with modern technologies</p>
+                        <div class="flip-card-back">
+                            <p>We create responsive web applications that deliver seamless user experiences across all devices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                            <h3>Beautiful UI/UX</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Clean, intuitive, and modern designs that keep users engaged.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h3>E-commerce Solutions</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>We develop secure and scalable e-commerce platforms that drive sales and enhance customer experiences.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Core Services -->
-    <section class="values">
-        <div class="values-container">
-            <div class="section-header">
-                <h2>Our Web Development Services</h2>
-                <p>Comprehensive solutions tailored to your business needs</p>
+<!-- Technologies Section (Infinite Logo Loop) -->
+    <section class="technologies-section section-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="text-align: center; font-size: 2rem; font-weight: bold;">Technologies We Master</h2>
+                <p style="text-align: center;">Cutting-edge tools and frameworks for modern development</p>
             </div>
-            
-            <div class="values-grid">
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Responsive Design</h3>
-                    <p>Mobile-first approach ensuring your website looks and works perfectly on all devices and screen sizes.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Mobile-first design</li>
-                        <li>Cross-device compatibility</li>
-                        <li>Touch-friendly interfaces</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-commerce Solutions</h3>
-                    <p>Complete online store development with secure payment gateways, inventory management, and user experience optimization.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Payment gateway integration</li>
-                        <li>Inventory management</li>
-                        <li>Order processing systems</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Content Management</h3>
-                    <p>User-friendly CMS solutions that allow you to easily manage and update your website content without technical knowledge.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Easy content updates</li>
-                        <li>User role management</li>
-                        <li>SEO optimization tools</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Progressive Web Apps</h3>
-                    <p>Modern PWA development that combines the best of web and mobile app experiences with offline functionality.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Offline functionality</li>
-                        <li>App-like experience</li>
-                        <li>Push notifications</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3>API Development</h3>
-                    <p>Custom API development and third-party integrations to connect your website with other systems and services.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>RESTful API design</li>
-                        <li>Third-party integrations</li>
-                        <li>Data synchronization</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Performance Optimization</h3>
-                    <p>Speed optimization and performance tuning to ensure your website loads quickly and provides excellent user experience.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Page speed optimization</li>
-                        <li>Image optimization</li>
-                        <li>Caching strategies</li>
-                    </ul>
-                </div>
+            <div class="logo-marquee">
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+                <!-- Duplicate for infinite loop effect -->
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+            </div>
+            <br>
+            <div class="text-center mt-4">
+                <a href="technologies.html" class="btn">Explore All Technologies</a>
             </div>
         </div>
     </section>
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/bussiness.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p>Empowering businesses with innovative web solutions that drive growth and success</p>
-        </div>
-    </div>
-    </section>
-
-    <!-- Technologies We Use -->
-    <section class="technologies">
-        <div class="technologies-container">
-            <div class="section-header">
-                <h2>Technologies We Master</h2>
-                <p>Built with cutting-edge technologies for optimal performance and scalability</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="tech-name">React.js</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-vuejs"></i>
-                    </div>
-                    <div class="tech-name">Vue.js</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-angular"></i>
-                    </div>
-                    <div class="tech-name">Angular</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <div class="tech-name">Node.js</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <div class="tech-name">PHP</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="tech-name">Python</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-wordpress"></i>
-                    </div>
-                    <div class="tech-name">WordPress</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <div class="tech-name">AWS</div>
-                </div>
-            </div>
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section section-light">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <!-- <p>Let's discuss how we can help transform your business with innovative technology solutions.</p> -->
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
     </section>
-
-    <!-- Development Process -->
-    <section class="services">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Our Development Process</h2>
-                <p>A systematic approach to delivering exceptional web solutions</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">1</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Discovery & Planning</h4>
-                    <p style="color: var(--text-secondary);">Understanding your requirements, goals, and target audience to create a comprehensive project plan.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">2</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Design & Prototyping</h4>
-                    <p style="color: var(--text-secondary);">Creating wireframes, mockups, and interactive prototypes to visualize the final product.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">3</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Development</h4>
-                    <p style="color: var(--text-secondary);">Building your website using modern technologies and best practices for optimal performance.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">4</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Testing & Launch</h4>
-                    <p style="color: var(--text-secondary);">Rigorous testing across devices and browsers, followed by deployment and launch support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="contact-cta-content">
-            <h2>Ready to Build Your Dream Website?</h2>
-            <p>Let's discuss your project requirements and create a web solution that exceeds your expectations</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-accent">Get Free Quote</a>
-                <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Floating Action Button -->
     <div class="fab-container">
         <div class="fab-main" id="fabMain">
@@ -351,54 +221,50 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i> +918596069160</p>
-                <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+</script>
+
 
 </body>
 </html>

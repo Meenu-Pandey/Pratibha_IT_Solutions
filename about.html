@@ -5,40 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Pratibha IT Solutions</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <!-- <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
-        <i class="fas fa-sun" id="themeIcon"></i>
-    </div> -->
-
-    <!-- Navigation -->
+<!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -62,15 +69,15 @@
                     <p>Founded in 2018, Pratibha IT Solutions began with a simple mission: to bridge the gap between complex technology and business success. What started as a small team of passionate developers has grown into a comprehensive technology partner for businesses across various industries.</p>
                     <p>We believe that technology should be an enabler, not a barrier. Our journey has been marked by continuous learning, adaptation to emerging technologies, and an unwavering commitment to delivering solutions that drive real business value.</p>
                     <div class="story-stats">
-                        <div class="stat-item">
+                        <div class="stat-item card">
                             <h3>5+</h3>
                             <p>Years of Excellence</p>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item card">
                             <h3>200+</h3>
                             <p>Projects Delivered</p>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item card">
                             <h3>50+</h3>
                             <p>Happy Clients</p>
                         </div>
@@ -80,7 +87,8 @@
                     <div class="image-placeholder">
                         <!-- <i class="fas fa-building"></i> -->
                         <img src="assets/images/about.png" alt="Company Building" height="400px" width="600px">
-                        <p>Company Building</p>
+                        <br>
+                        <img src="https://wallpapers.com/images/featured/teamwork-pictures-don5zvz7d1ip1ovb.jpg" alt="Team Collaboration" height="400px" width="600px">
                     </div>
                 </div>
             </div>
@@ -112,9 +120,8 @@
     <!-- Core Values -->
     <section class="core-values">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Core Values</h2>
-                <p>The principles that guide everything we do</p>
+            <div>
+                <h2>Core Values</h2>
             </div>
             <div class="values-grid">
                 <div class="value-card">
@@ -166,9 +173,9 @@
     <!-- Team Section -->
     <section class="team-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Meet Our Team</h2>
-                <p>The talented professionals behind our success</p>
+            <div>
+                <h2 style="color: aliceblue;">Meet Our Team</h2>
+                <p style="color: aliceblue;">The talented professionals behind our success</p>
             </div>
             <div class="team-grid">
                 <div class="team-member">
@@ -178,7 +185,7 @@
                         </div>
                     </div>
                     <div class="member-info">
-                        <h3>Rajesh Kumar</h3>
+                        <h3></h3>
                         <p class="member-role">CEO & Founder</p>
                         <p class="member-bio">15+ years of experience in software development and technology consulting. Passionate about building innovative solutions.</p>
                         <div class="member-social">
@@ -194,7 +201,7 @@
                         </div>
                     </div>
                     <div class="member-info">
-                        <h3>Priya Sharma</h3>
+                        <h3></h3>
                         <p class="member-role">CTO</p>
                         <p class="member-bio">Expert in cloud architecture and emerging technologies. Leads our technical strategy and innovation initiatives.</p>
                         <div class="member-social">
@@ -210,7 +217,7 @@
                         </div>
                     </div>
                     <div class="member-info">
-                        <h3>Amit Patel</h3>
+                        <h3></h3>
                         <p class="member-role">Head of Development</p>
                         <p class="member-bio">Full-stack developer with expertise in modern web technologies. Ensures code quality and best practices.</p>
                         <div class="member-social">
@@ -226,7 +233,7 @@
                         </div>
                     </div>
                     <div class="member-info">
-                        <h3>Neha Singh</h3>
+                        <h3></h3>
                         <p class="member-role">UX/UI Designer</p>
                         <p class="member-bio">Creative designer focused on user experience and modern interface design. Creates intuitive digital experiences.</p>
                         <div class="member-social">
@@ -242,8 +249,8 @@
     <!-- Achievements -->
     <section class="achievements">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Achievements</h2>
+            <div>
+                <h2>Achievements</h2>
                 <p>Recognition and milestones that define our journey</p>
             </div>
             <div class="achievements-grid">
@@ -271,22 +278,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Work Together?</h2>
-                <p>Let's discuss how we can help transform your business with innovative technology solutions.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                    <a href="case-studies.html" class="btn btn-secondary">View Our Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- Floating Action Button -->
+    <!-- Floating Action Button -->
     <div class="fab-container">
         <div class="fab-main" id="fabMain">
             <i class="fas fa-plus"></i>
@@ -305,52 +297,37 @@
         </div>
     </div>
 
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section section-light">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p style="color: aliceblue;">Let's discuss how we can help transform your business with innovative technology solutions.</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i> +918596069160</p>
-                <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 

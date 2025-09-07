@@ -5,41 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - Pratibha IT Solutions</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/careers.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header section-dark">
         <div class="container">
             <div class="page-header-content">
                 <h1 class="page-title">Join Our Team</h1>
@@ -49,7 +63,7 @@
     </section>
 
     <!-- Company Culture -->
-    <section class="company-culture">
+    <section class="company-culture section-light">
         <div class="container">
             <div class="culture-grid">
                 <div class="culture-content">
@@ -57,64 +71,61 @@
                     <p>At Pratibha IT Solutions, we believe that our people are our greatest asset. We foster a culture of innovation, collaboration, and continuous learning where every team member can thrive and grow.</p>
                     <p>Join a dynamic team that's passionate about technology and committed to delivering exceptional solutions for our clients. Here, you'll have the opportunity to work on cutting-edge projects, learn from industry experts, and make a real impact.</p>
                 </div>
-                <div class="culture-image">
                     <div class="image-placeholder">
                         <img src="assets/images/team.png" alt="Team Collaboration" height="400px" width="600px">
-                        <p>Team Collaboration</p>
                     </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits -->
-    <section class="benefits">
+    <section class="benefits section-dark">
         <div class="container">
-            <div class="section-header">
+            <div>
                 <h2>Benefits & Perks</h2>
                 <p>We take care of our team with comprehensive benefits and a great work environment</p>
             </div>
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Learning & Development</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Learning & Development</h3>
                     <p>Continuous learning opportunities, training programs, and certifications to help you grow your skills.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>Flexible Work</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Flexible Work</h3>
                     <p>Hybrid work model with flexible hours and remote work options for better work-life balance.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-heartbeat"></i>
                     </div>
-                    <h3>Health & Wellness</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Health & Wellness</h3>
                     <p>Comprehensive health insurance, wellness programs, and mental health support for you and your family.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-coffee"></i>
                     </div>
-                    <h3>Modern Office</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Modern Office</h3>
                     <p>State-of-the-art office facilities with recreation areas, gaming zones, and comfortable workspaces.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Time Off</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Time Off</h3>
                     <p>Generous paid time off, holidays, and sabbatical opportunities for rest and rejuvenation.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card card">
                     <div class="benefit-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Career Growth</h3>
+                    <h3 style="color: rgb(64, 62, 62);">Career Growth</h3>
                     <p>Clear career progression paths, mentorship programs, and opportunities to lead exciting projects.</p>
                 </div>
             </div>
@@ -122,14 +133,14 @@
     </section>
 
     <!-- Open Positions -->
-    <section class="open-positions">
+    <section class="open-positions section-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Open Positions</h2>
-                <p>Explore current opportunities and find your perfect role</p>
+            <div>
+                <h2 style="text-align: right;">Open Positions</h2>
+                <p style="text-align: right;">Explore current opportunities and find your perfect role</p>
             </div>
             <div class="positions-grid">
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>Senior Full-Stack Developer</h3>
                         <span class="position-type">Full-time</span>
@@ -149,7 +160,7 @@
                     <button class="btn btn-primary apply-btn" data-position="Senior Full-Stack Developer">Apply Now</button>
                 </div>
 
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>Mobile App Developer</h3>
                         <span class="position-type">Full-time</span>
@@ -169,7 +180,7 @@
                     <button class="btn btn-primary apply-btn" data-position="Mobile App Developer">Apply Now</button>
                 </div>
 
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>DevOps Engineer</h3>
                         <span class="position-type">Full-time</span>
@@ -189,7 +200,7 @@
                     <button class="btn btn-primary apply-btn" data-position="DevOps Engineer">Apply Now</button>
                 </div>
 
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>UX/UI Designer</h3>
                         <span class="position-type">Full-time</span>
@@ -209,7 +220,7 @@
                     <button class="btn btn-primary apply-btn" data-position="UX/UI Designer">Apply Now</button>
                 </div>
 
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>Project Manager</h3>
                         <span class="position-type">Full-time</span>
@@ -229,7 +240,7 @@
                     <button class="btn btn-primary apply-btn" data-position="Project Manager">Apply Now</button>
                 </div>
 
-                <div class="position-card">
+                <div class="position-card card">
                     <div class="position-header">
                         <h3>Business Analyst</h3>
                         <span class="position-type">Full-time</span>
@@ -252,9 +263,53 @@
         </div>
     </section>
 
+    <!-- Unpaid Internships -->
+    <section class="internships-section section-light">
+            <div class="positions-grid">
+                <div class="position-card card">
+                    <div class="position-header">
+                        <h3>Software Development Intern</h3>
+                        <span class="position-type">Internship</span>
+                        <span class="position-type">Unpaid</span>
+                    </div>
+                    <div class="position-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        <p><i class="fas fa-clock"></i> 3-6 months</p>
+                        <p><i class="fas fa-code"></i> JavaScript, Python, HTML, CSS</p>
+                    </div>
+                    <p class="position-description">Learn and contribute to real-world software projects. This internship is ideal for students or recent graduates looking to gain hands-on experience in a fast-paced tech environment.</p>
+                    <div class="position-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">Backend</span>
+                        <span class="tag">Web Development</span>
+                    </div>
+                    <button class="btn btn-primary apply-btn" data-position="Software Development Intern (Unpaid)">Apply Now</button>
+                </div>
+                <div class="position-card card">
+                    <div class="position-header">
+                        <h3>Digital Marketing Intern</h3>
+                        <span class="position-type">Internship</span>
+                        <span class="position-type">Unpaid</span>
+                    </div>
+                    <div class="position-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        <p><i class="fas fa-clock"></i> 3-6 months</p>
+                        <p><i class="fas fa-code"></i> SEO, Social Media, Content Creation</p>
+                    </div>
+                    <p class="position-description">Work with our marketing team to develop and execute digital marketing strategies. This internship offers hands-on experience in SEO, social media management, and content creation.</p>
+                    <div class="position-tags">
+                        <span class="tag">Marketing</span>
+                        <span class="tag">SEO</span>
+                        <span class="tag">Content</span>
+                    </div>
+                    <button class="btn btn-primary apply-btn" data-position="Digital Marketing Intern (Unpaid)">Apply Now</button>
+                </div>
+            </div>
+    </section>
+
     <!-- Application Form Modal -->
     <div id="applicationModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content card">
             <span class="close">&times;</span>
             <h2>Apply for <span id="modalPosition"></span></h2>
             <form id="applicationForm" class="application-form">
@@ -313,22 +368,8 @@
         </div>
     </div>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Don't See Your Role?</h2>
-                <p>We're always looking for talented individuals to join our team. Send us your resume and we'll keep you in mind for future opportunities.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating Action Button -->
-    <div class="fab-container">
+     <!-- Floating Action Button -->
+     <div class="fab-container">
         <div class="fab-main" id="fabMain">
             <i class="fas fa-plus"></i>
         </div>
@@ -346,142 +387,40 @@
         </div>
     </div>
 
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section section-light">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <!-- <p>Let's discuss how we can help transform your business with innovative technology solutions.</p> -->
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i> +918596069160</p>
-                <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 
-
-    <script src="assets/js/main.js"></script>
-    <script>
-        // Careers page specific JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById('applicationModal');
-            const applyBtns = document.querySelectorAll('.apply-btn');
-            const closeBtn = document.querySelector('.close');
-            const modalPosition = document.getElementById('modalPosition');
-            const applicationForm = document.getElementById('applicationForm');
-
-            // Open modal when Apply Now button is clicked
-            applyBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const position = this.getAttribute('data-position');
-                    modalPosition.textContent = position;
-                    modal.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            // Close modal when X is clicked
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-
-            // Close modal when clicking outside
-            window.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // Handle form submission
-        applicationForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Create FormData object
-          const formData = new FormData(this);
-
-          // Show loading state
-          const submitBtn = this.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = "Submitting...";
-          submitBtn.disabled = true;
-
-          // Send data to server
-          fetch("contact-form/submit_application.php", {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.success) {
-                submitBtn.textContent = "Application Submitted!";
-                submitBtn.classList.add("success");
-
-                // Reset form and close modal after delay
-                setTimeout(() => {
-                  this.reset();
-                  submitBtn.textContent = originalText;
-                  submitBtn.classList.remove("success");
-                  submitBtn.disabled = false;
-                  modal.style.display = "none";
-                  document.body.style.overflow = "auto";
-
-                  // Show notification
-                  if (typeof showNotification === "function") {
-                    showNotification(data.message, "success");
-                  }
-                }, 2000);
-              } else {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                alert(data.message || "An error occurred. Please try again.");
-              }
-            })
-            .catch((error) => {
-              submitBtn.textContent = originalText;
-              submitBtn.disabled = false;
-              alert("An error occurred. Please try again.");
-              console.error("Error:", error);
-            });
-        });
-        });
-    </script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

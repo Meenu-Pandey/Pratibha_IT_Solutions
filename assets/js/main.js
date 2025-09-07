@@ -11,13 +11,168 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initParticleEffects();
     setupFAB();
+    setupCareersPage();
+    initHeroSlider();
+    initServicesSlider();
+    
 });
+
+// Initialize Hero Slider
+function initHeroSlider() {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const prevSlideBtn = document.querySelector('.prev-slide');
+    const nextSlideBtn = document.querySelector('.next-slide');
+    const sliderDotsContainer = document.querySelector('.slider-dots');
+    let currentSlide = 0;
+    let slideInterval;
+
+    if (!heroSlides.length || !prevSlideBtn || !nextSlideBtn || !sliderDotsContainer) return;
+
+    function showSlide(index) {
+        heroSlides.forEach((slide, i) => {
+            slide.classList.remove('active', 'leaving');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+        updateDots(index);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+        showSlide(currentSlide);
+    }
+
+    function createDots() {
+        sliderDotsContainer.innerHTML = '';
+        heroSlides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.setAttribute('data-slide-index', index);
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+                resetSlideInterval();
+            });
+            sliderDotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateDots(activeIndex) {
+        document.querySelectorAll('.slider-dots .dot').forEach((dot, index) => {
+            if (index === activeIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function startSlideInterval() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetSlideInterval() {
+        clearInterval(slideInterval);
+        startSlideInterval();
+    }
+
+    prevSlideBtn.addEventListener('click', () => { prevSlide(); resetSlideInterval(); });
+    nextSlideBtn.addEventListener('click', () => { nextSlide(); resetSlideInterval(); });
+
+    createDots();
+    showSlide(currentSlide);
+    startSlideInterval();
+}
+
+// Initialize Services Slider
+function initServicesSlider() {
+    const servicesSlider = document.querySelector('.services-slider');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const servicePrevBtn = document.querySelector('.service-prev');
+    const serviceNextBtn = document.querySelector('.service-next');
+    const serviceDotsContainer = document.querySelector('.service-dots');
+    
+    if (!servicesSlider || !serviceCards.length || !servicePrevBtn || !serviceNextBtn || !serviceDotsContainer) return;
+
+    let currentIndex = 0;
+    let cardsPerPage = getCardsPerPage();
+    let totalPages = Math.ceil(serviceCards.length / cardsPerPage);
+
+    function getCardsPerPage() {
+        if (window.innerWidth <= 768) return 1; // Mobile
+        if (window.innerWidth <= 1024) return 2; // Tablet
+        return 3; // Desktop
+    }
+
+    function updateSlider() {
+        const offset = -currentIndex * (100 / cardsPerPage);
+        servicesSlider.style.transform = `translateX(${offset}%)`;
+        updateServiceDots();
+    }
+
+    function nextServiceSlide() {
+        currentIndex = (currentIndex + 1) % totalPages;
+        updateSlider();
+    }
+
+    function prevServiceSlide() {
+        currentIndex = (currentIndex - 1 + totalPages) % totalPages;
+        updateSlider();
+    }
+
+    function createServiceDots() {
+        serviceDotsContainer.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.setAttribute('data-index', i);
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateSlider();
+            });
+            serviceDotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateServiceDots() {
+        document.querySelectorAll('.service-dots .dot').forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    servicePrevBtn.addEventListener('click', prevServiceSlide);
+    serviceNextBtn.addEventListener('click', nextServiceSlide);
+    
+    // Re-calculate on resize
+    window.addEventListener('resize', () => {
+        cardsPerPage = getCardsPerPage();
+        totalPages = Math.ceil(serviceCards.length / cardsPerPage);
+        currentIndex = 0; // Reset to first slide on resize
+        createServiceDots();
+        updateSlider();
+    });
+
+    createServiceDots();
+    updateSlider();
+}
 
 // Navigation functionality
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
     const hamburger = document.querySelector('.hamburger');
-    
+    const navLinks = document.querySelector('.nav-links'); // Get reference to navLinks here
+    const dropdowns = document.querySelectorAll('.dropdown');
+
     // Sticky header on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
@@ -28,25 +183,82 @@ function initNavigation() {
     });
 
     // Mobile menu toggle
-    if (hamburger) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
-            const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         });
     }
 
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
+    // Dropdown functionality
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        if (dropbtn && dropdownContent) {
+            // For desktop, CSS :hover handles this. For mobile, we need click.
+            dropbtn.addEventListener('click', (e) => {
+                // Only prevent default if it's not a direct link to services.html
+                if (window.innerWidth <= 768) { // Apply click toggle only for mobile
+                    e.preventDefault();
+                    // Close other open dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.querySelector('.dropdown-content')?.classList.remove('show');
+                            otherDropdown.querySelector('.dropbtn')?.classList.remove('active');
+                        }
+                    });
+                    dropdownContent.classList.toggle('show');
+                    dropbtn.classList.toggle('active'); // Toggle active class on dropbtn for chevron
+                }
+            });
+
+            // Close mobile menu when clicking on a link INSIDE the dropdown
+            dropdownContent.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (hamburger && navLinks) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        dropdownContent.classList.remove('show'); // Also close dropdown
+                        dropbtn.classList.remove('active'); // Also remove active from dropbtn
+                    }
+                });
+            });
+        }
+    });
+
+    // Close mobile menu when clicking on a non-dropdown link
+    document.querySelectorAll('.nav-links > li > a:not(.dropbtn)').forEach(link => {
         link.addEventListener('click', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
             if (hamburger && navLinks) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                // Close any open dropdowns when closing the main mobile menu
+                dropdowns.forEach(dropdown => {
+                    dropdown.querySelector('.dropdown-content')?.classList.remove('show');
+                    dropdown.querySelector('.dropbtn')?.classList.remove('active');
+                });
             }
         });
+    });
+
+    // Close dropdowns and mobile menu when clicking outside
+    window.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                const dropbtn = dropdown.querySelector('.dropbtn');
+                if (dropdownContent && dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                    dropbtn?.classList.remove('active'); // Remove active class from dropbtn
+                }
+            });
+            // Also close the mobile menu if open
+            if (hamburger && navLinks && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        }
     });
 }
 
@@ -76,6 +288,83 @@ function setupFAB() {
             });
         }
     }
+
+function setupCareersPage() {
+    const modal = document.getElementById('applicationModal');
+    const applyBtns = document.querySelectorAll('.apply-btn');
+    const closeBtn = document.querySelector('.close');
+    const modalPosition = document.getElementById('modalPosition');
+    const applicationForm = document.getElementById('applicationForm');
+
+    if (modal && applyBtns.length > 0 && closeBtn && modalPosition && applicationForm) {
+        // Open modal when Apply Now button is clicked
+        applyBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const position = this.getAttribute('data-position');
+                modalPosition.textContent = position;
+                modal.style.display = 'flex'; // Use flex to center
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal when X is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle form submission
+        applicationForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Submitting...";
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch("contact-form/submit_application.php", {
+                    method: "POST",
+                    body: formData,
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    submitBtn.textContent = "Application Submitted!";
+                    submitBtn.classList.add("success");
+
+                    setTimeout(() => {
+                        this.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.classList.remove("success");
+                        submitBtn.disabled = false;
+                        modal.style.display = "none";
+                        document.body.style.overflow = "auto";
+                        showNotification(data.message, "success");
+                    }, 2000);
+                } else {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    showNotification(data.message || "An error occurred. Please try again.", "error");
+                }
+            } catch (error) {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                showNotification("An error occurred. Please try again.", "error");
+                console.error("Error:", error);
+            }
+        });
+    }
+}
 
 // Mobile menu functionality
 function initMobileMenu() {
@@ -304,7 +593,7 @@ function initScrollEffects() {
     // Add scroll-triggered animations to sections
     const sections = document.querySelectorAll('section, .stats, .services, .values, .case-studies, .technologies');
     sections.forEach(section => {
-        section.classList.add('fade-in-up');
+        // section.classList.add('fade-in-up'); // Removed to prevent immediate hiding
         observer.observe(section);
     });
 }
@@ -480,4 +769,26 @@ window.addEventListener('load', () => {
     
     // Initialize any remaining animations
     initScrollEffects();
+    initInfiniteTechCarousel();
 });
+
+// Infinite Technology Carousel Functionality
+function initInfiniteTechCarousel() {
+    const carouselTrack = document.querySelector('.logo-carousel-track');
+    if (!carouselTrack) return;
+
+    // Duplicate children for seamless loop
+    const children = Array.from(carouselTrack.children);
+    children.forEach(child => {
+        carouselTrack.appendChild(child.cloneNode(true));
+    });
+
+    // Pause on hover
+    carouselTrack.addEventListener('mouseover', () => {
+        carouselTrack.style.animationPlayState = 'paused';
+    });
+
+    carouselTrack.addEventListener('mouseout', () => {
+        carouselTrack.style.animationPlayState = 'running';
+    });
+}

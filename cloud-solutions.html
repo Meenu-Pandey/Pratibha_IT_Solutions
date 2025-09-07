@@ -3,429 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Solutions Services - Pratibha IT Solutions</title>
-    <meta name="description" content="Professional cloud solutions including migration, AWS, Azure, Google Cloud, DevOps, and infrastructure management services.">
+    <title>Cloud Solutions - Pratibha IT Solutions</title>
+    <meta name="description" content="Professional cloud solutions for businesses, including cloud migration, management, and optimization services.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/mobile-development.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <!-- <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
-        <i class="fas fa-sun" id="themeIcon"></i>
-    </div> -->
-
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="60" width="60" style="margin-right: 10px;">
-            <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                <span style="font-size: 1.5rem; font-weight: bold; color: inherit;">Pratibha</span>
-                <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">IT SOLUTIONS</span>
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Pratibha IT Solutions Logo" height="50px" width="90px" >
+            <div class="logo-text-container">
+                <span class="logo-main">PRATIBHA</span>
+                <span class="logo-sub">IT SOLUTIONS</span>
             </div>
         </a>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="web-development.html">Web Development</a>
+                        <a href="mobile-development.html">Mobile Development</a>
+                        <a href="cloud-solutions.html">Cloud Solutions</a>
+                        <a href="custom-software.html">Custom Software</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="cybersecurity.html">Cybersecurity</a>
+                    </div>
+                </li>
                 <li><a href="technologies.html">Technologies</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li class="nav-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                <li>
+                    <a href="contact.html" class="btn">Get Free Consultation</a>
                 </li>
             </ul>
             
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
-        <!-- Page Header -->
-    <section class="page-header" style="position: relative; text-align: center; padding: 100px 20px; color: #fff;">
-        <!-- Background Image -->
-        <img src="assets/images/cloud.png" alt="web" 
-            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: 1;">
-
-        <!-- Text Content -->
-        <div class="section-container" style="position: relative; z-index: 2;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Cloud Solutions Services</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Transform your business with scalable, secure, and cost-effective cloud infrastructure solutions
+    <!-- Page Header -->
+    <section class="page-header" style="color: white;">
+        <div class="container text-center">
+            <h1 style="color: white;">Cloud Solutions</h1>
+            <p>
+                We craft powerful cloud solutions that engage users and scale your business.
             </p>
         </div>
     </section>
-    <br>
-<div class="sidebar" style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
+  <!-- Overview -->
+<section style="background: #f9f9fb; padding: 4rem 2rem; font-family: 'Inter', sans-serif;">
+  <div style="
+      max-width: 1100px; 
+      margin: auto; 
+      display: flex; 
+      align-items: center; 
+      gap: 3rem; 
+      flex-wrap: wrap;
+      flex-direction: row;
+    ">
     
-    <!-- Sidebar Menu -->
-    <div class="sidebar-content" style="flex: 1; min-width: 200px;">
-        <h3 style="text-align: center; margin-bottom: 1rem; color: var(--accent-color);">Services</h3>
-        <a href="web-development.html" class="active btn btn-secondary">Web Development</a>
-        <a href="mobile-development.html" class="btn btn-secondary">Mobile Development</a>
-        <a href="cloud-solutions.html" class="btn btn-secondary">Cloud Solutions</a>
-        <a href="custom-software.html" class="btn btn-secondary">Custom Software</a>
-        <a href="digital-marketing.html" class="btn btn-secondary">Digital Marketing</a>
-        <a href="cybersecurity.html" class="btn btn-secondary">Cybersecurity</a>
+    <!-- Text First on Mobile -->
+    <div style="flex: 1; min-width: 280px; order: 1;">
+      <h2 style="font-size: 2.2rem; font-weight: 700; color: #222; margin-bottom: 1rem;">
+        Overview
+      </h2>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        At Pratibha IT Solutions, our Cloud Solutions empower businesses to achieve agility, scalability, and cost efficiency. 
+        We help you leverage the full potential of cloud platforms to transform your IT infrastructure into a growth enabler.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        From cloud migration and hybrid architectures to DevOps automation and serverless applications, 
+        our experts ensure smooth, secure, and high-performance deployments across AWS, Azure, and Google Cloud.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: justify;">
+        We specialize in designing resilient infrastructures with auto-scaling, backup, disaster recovery, and advanced monitoring—ensuring business continuity and minimized downtime.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #555; text-align: justify;">
+        Whether you’re a startup optimizing costs or an enterprise modernizing legacy systems, 
+        our cloud-first strategies accelerate innovation while maintaining compliance and security standards.
+      </p>
     </div>
     
-    <!-- Sidebar Image -->
-    <div style="flex: 1; text-align: center; min-width: 250px;">
-        <div class="culture-image">
-            <div class="image-placeholder" style="display: flex; flex-direction: column; align-items: center;">
-                <img src="assets/images/cloud-side.png" alt="Sidebar Image" 
-                     style="max-width: 100%; height: auto; border-radius: 8px;">
-                <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Cloud Solutions</p>
-            </div>
-        </div>
+    <!-- Image Second on Mobile -->
+    <div style="flex: 1; text-align: center; min-width: 280px; order: 2;">
+      <img src="assets/images/cloud-side.png" alt="Cloud Solutions Overview" 
+           style="border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); max-width: 100%; height: auto;">
     </div>
-</div>
-<br>
-    <!-- Service Overview -->
-    <section class="services" style="padding-top: 4rem;">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Cloud-First Transformation</h2>
-                <p>From migration to optimization, we help businesses leverage the power of cloud computing for growth and innovation</p>
+    
+  </div>
+</section>
+
+    <!-- Why Choose Us / Values -->
+    <section class="why-choose-us-section section-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: whitesmoke; font-size: 2rem; font-weight: bolder;">WHY CHOOSE US</h2>
+                <p style="color: lightgrey;">We're committed to delivering exceptional results through innovation and partnership</p>
             </div>
             
-            <div class="service-overview" style="background: var(--bg-card); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 4rem;">
-                <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 3rem; align-items: center;">
-                    <div>
-                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Why Choose Our Cloud Solutions?</h3>
-                        <ul style="color: var(--text-secondary); line-height: 1.8;">
-                            <li>✓ Multi-cloud expertise (AWS, Azure, GCP)</li>
-                            <li>✓ Security-first approach</li>
-                            <li>✓ Cost optimization strategies</li>
-                            <li>✓ 24/7 monitoring and support</li>
-                            <li>✓ Scalable architecture design</li>
-                            <li>✓ Compliance and governance</li>
-                        </ul>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 8rem; height: 8rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 3rem; color: white;">
-                            <i class="fas fa-cloud"></i>
+            <div class="why-choose-us-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-cloud"></i></div>
+                            <h3>Cloud Migration</h3>
                         </div>
-                        <h4 style="color: var(--text-primary);">Enterprise Cloud Solutions</h4>
-                        <p style="color: var(--text-secondary);">Scalable, secure, and cost-effective cloud infrastructure</p>
+                        <div class="flip-card-back">
+                            <p>Seamless migration of your applications and data to the cloud with minimal downtime.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fab fa-aws"></i></div>
+                            <h3>AWS Solutions</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Expertise in AWS services to build scalable, secure, and high-performance applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon"><i class="fas fa-code-branch"></i></div>
+                            <h3>DevOps & CI/CD</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Streamlined development and deployment processes with CI/CD pipelines and DevOps practices.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Core Services -->
-    <section class="values">
-        <div class="values-container">
-            <div class="section-header">
-                <h2>Our Cloud Services</h2>
-                <p>Comprehensive cloud solutions for modern businesses</p>
+<!-- Technologies Section (Infinite Logo Loop) -->
+    <section class="technologies-section section-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="text-align: center; font-size: 2rem; font-weight: bold;">Technologies We Master</h2>
+                <p style="text-align: center;">Cutting-edge tools and frameworks for modern development</p>
             </div>
-            
-            <div class="values-grid">
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3>Cloud Migration</h3>
-                    <p>Seamless migration of your existing infrastructure to the cloud with minimal downtime and risk assessment.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Assessment and planning</li>
-                        <li>Data migration strategies</li>
-                        <li>Zero-downtime migration</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3>AWS Solutions</h3>
-                    <p>Comprehensive Amazon Web Services solutions including EC2, S3, Lambda, and advanced AWS services.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>EC2 and ECS management</li>
-                        <li>S3 and storage solutions</li>
-                        <li>Lambda serverless functions</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h3>Azure Services</h3>
-                    <p>Microsoft Azure cloud solutions with Virtual Machines, App Services, and Azure DevOps integration.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Azure VM management</li>
-                        <li>App Service deployment</li>
-                        <li>Azure DevOps pipelines</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h3>Google Cloud Platform</h3>
-                    <p>Google Cloud solutions including Compute Engine, Cloud Storage, and AI/ML services integration.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Compute Engine instances</li>
-                        <li>Cloud Storage solutions</li>
-                        <li>AI/ML integration</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Serverless Architecture</h3>
-                    <p>Build scalable applications using serverless technologies like AWS Lambda, Azure Functions, and Google Cloud Functions.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Function-as-a-Service</li>
-                        <li>Event-driven architecture</li>
-                        <li>Auto-scaling solutions</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card hover-lift">
-                    <div class="value-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>DevOps & CI/CD</h3>
-                    <p>Implement continuous integration and deployment pipelines with automated testing and deployment strategies.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>CI/CD pipeline setup</li>
-                        <li>Automated testing</li>
-                        <li>Infrastructure as Code</li>
-                    </ul>
-                </div>
+            <div class="logo-marquee">
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+                <!-- Duplicate for infinite loop effect -->
+                <div class="logo-card"><i class="fab fa-react" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-node-js" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-python" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-aws" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-docker" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-angular" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-vuejs" style="font-size: 2rem;"></i></div>
+                <div class="logo-card"><i class="fab fa-laravel" style="font-size: 2rem;"></i></div>
+            </div>
+            <br>
+            <div class="text-center mt-4">
+                <a href="technologies.html" class="btn">Explore All Technologies</a>
             </div>
         </div>
     </section>
-    <section>
-    <div class="culture-image" style="text-align: center; margin: 30px;">
-        <div class="image-placeholder" style="display: inline-block;">
-            <img src="assets/images/bussiness.png" alt="Team Collaboration" style="max-width: 75%; height: auto; border-radius: 8px;">
-            <p style="margin-top: 10px; font-weight: bold; color: var(--text-primary);">Empowering businesses with innovative cloud solutions that drive growth and success</p>
-        </div>
-    </div>
-    </section>
-    <!-- Cloud Platforms -->
-    <section class="services">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Cloud Platforms We Specialize In</h2>
-                <p>Expertise across major cloud providers and hybrid solutions</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--accent-color), #f97316); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Amazon Web Services</h4>
-                    <p style="color: var(--text-secondary);">Leading cloud platform with comprehensive services for compute, storage, database, and AI/ML solutions.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>EC2, ECS, and EKS</li>
-                        <li>S3, RDS, and DynamoDB</li>
-                        <li>Lambda and API Gateway</li>
-                    </ul>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--accent-color), #f97316); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Microsoft Azure</h4>
-                    <p style="color: var(--text-secondary);">Enterprise-grade cloud platform with strong integration with Microsoft products and services.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Virtual Machines</li>
-                        <li>App Service and Functions</li>
-                        <li>Azure DevOps</li>
-                    </ul>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--accent-color), #f97316); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Google Cloud Platform</h4>
-                    <p style="color: var(--text-secondary);">Innovative cloud platform with advanced AI/ML capabilities and global network infrastructure.</p>
-                    <ul style="text-align: left; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-                        <li>Compute Engine</li>
-                        <li>Cloud Storage and BigQuery</li>
-                        <li>AI/ML and TensorFlow</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section section-light">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <!-- <p>Let's discuss how we can help transform your business with innovative technology solutions.</p> -->
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
     </section>
-
-    <!-- Technologies We Use -->
-    <section class="technologies">
-        <div class="technologies-container">
-            <div class="section-header">
-                <h2>Cloud Technologies We Master</h2>
-                <p>Built with cutting-edge cloud technologies for optimal performance and scalability</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <div class="tech-name">Docker</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-kubernetes"></i>
-                    </div>
-                    <div class="tech-name">Kubernetes</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-terraform"></i>
-                    </div>
-                    <div class="tech-name">Terraform</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-jenkins"></i>
-                    </div>
-                    <div class="tech-name">Jenkins</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="tech-name">GitHub Actions</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-ansible"></i>
-                    </div>
-                    <div class="tech-name">Ansible</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-prometheus"></i>
-                    </div>
-                    <div class="tech-name">Prometheus</div>
-                </div>
-                
-                <div class="tech-item hover-scale">
-                    <div class="tech-icon">
-                        <i class="fab fa-grafana"></i>
-                    </div>
-                    <div class="tech-name">Grafana</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cloud Solutions -->
-    <section class="services">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Specialized Cloud Solutions</h2>
-                <p>Tailored cloud solutions for specific business needs</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Database Solutions</h4>
-                    <p style="color: var(--text-secondary);">Managed database services with high availability, backup, and disaster recovery solutions.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Security & Compliance</h4>
-                    <p style="color: var(--text-secondary);">Cloud security solutions with identity management, encryption, and compliance frameworks.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Monitoring & Analytics</h4>
-                    <p style="color: var(--text-secondary);">Comprehensive monitoring solutions with real-time alerts, logging, and performance analytics.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);" class="hover-lift">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: white;">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Cost Optimization</h4>
-                    <p style="color: var(--text-secondary);">Cloud cost management strategies to optimize spending and maximize ROI on cloud investments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Development Process -->
-    <section class="services">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Our Cloud Implementation Process</h2>
-                <p>A systematic approach to successful cloud transformation</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">1</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Assessment & Strategy</h4>
-                    <p style="color: var(--text-secondary);">Evaluate current infrastructure and create a comprehensive cloud migration and optimization strategy.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">2</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Architecture Design</h4>
-                    <p style="color: var(--text-secondary);">Design scalable and secure cloud architecture that meets your business requirements and budget.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">3</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Implementation & Migration</h4>
-                    <p style="color: var(--text-secondary);">Execute the migration plan with minimal disruption and comprehensive testing of all systems.</p>
-                </div>
-                
-                <div style="background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative;">
-                    <div style="width: 3rem; height: 3rem; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: bold;">4</div>
-                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Optimization & Support</h4>
-                    <p style="color: var(--text-secondary);">Continuous monitoring, optimization, and 24/7 support to ensure optimal cloud performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="contact-cta-content">
-            <h2>Ready to Transform Your Business with Cloud?</h2>
-            <p>Let's discuss your cloud strategy and create a solution that drives efficiency and growth</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-accent">Get Free Quote</a>
-                <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Floating Action Button -->
     <div class="fab-container">
         <div class="fab-main" id="fabMain">
@@ -447,54 +212,50 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Pratibha IT Solutions</h3>
-                <p>Your trusted partner for innovative technology solutions that drive business growth and digital transformation.</p>
-                <div class="social-links">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pratibha IT Solutions
+                </div>
+                <div class="social-icons">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <br>
-                <a href="services.html">Services</a>
-                <br>
-                <a href="case-studies.html">Case Studies</a>
-                <br>
-                <a href="technologies.html">Technologies</a>
-                <br>
-                <a href="contact.html">Contact</a>
-                <br>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="web-development.html">Web Development</a><br>
-                <a href="mobile-development.html">Mobile Development</a><br>
-                <a href="cloud-solutions.html">Cloud Solutions</a><br>
-                <a href="custom-software.html">Custom Software</a><br>
-                <a href="services.html">Digital Marketing</a><br>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 19 , S.A.S.NAGAR (MOHALI), JANATA MARKET, PHASE 3B1, RUPNAGAR, PUNJAB, India (IN), Pin Code:- 160059</p>
-                <p><i class="fas fa-phone"></i> +918596069160</p>
-                <p><i class="fas fa-envelope"></i> info@pratibhait.in <br> support@pratibhait.in</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pratibha IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+</script>
+
 
 </body>
 </html>

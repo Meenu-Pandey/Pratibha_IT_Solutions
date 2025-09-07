@@ -1,0 +1,787 @@
+/* styles for careers.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Color Variables */
+    --primary-gradient: linear-gradient(90deg, #58aeff, #266eb3); /* Blue Gradient */
+    --secondary-color: #343a40; /* Dark Gray */
+    --accent-color: #a855f7;    /* Purple */
+
+    /* Existing variables from styles.css to ensure consistency */
+    --primary-light: #58aeff;
+    --primary-dark: #266eb3;
+    --text-color-light: #6c6969;
+    --text-color-dark: #021228;
+    --bg-light: #f8f9fa;
+    --bg-dark: #001f3e;
+    --card-bg-light: rgba(255, 255, 255, 0.8);
+    --card-bg-dark: rgba(0, 25, 50, 0.8);
+    --border-radius-sm: 1rem;
+    --border-radius-lg: 2rem;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color-light: #eee;
+        --text-color-dark: #333;
+        --bg-light: #212529;
+        --bg-dark: #f8f9fa;
+        --card-bg-light: rgba(33, 37, 41, 0.8);
+        --card-bg-dark: rgba(255, 255, 255, 0.8);
+        --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Fluid Typography */
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.125rem); /* 16px to 18px */
+    line-height: 1.7; /* Smoother line height */
+}
+
+h1 {
+    font-size: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2rem, 1.3rem + 2vw, 3rem);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: clamp(1.25rem, 1rem + 0.75vw, 1.75rem);
+}
+
+/* Consistent Section Padding */
+section {
+    padding: 6rem 0; /* Increased padding for smoother sections */
+    position: relative; /* For scroll animations */
+    overflow: hidden; /* For animations that might extend beyond */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.05rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: 5px;
+}
+
+.section-header p {
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 1.2rem);
+    color: var(--text-color-light);
+    max-width: 700px;
+    margin: 1rem auto 0;
+}
+
+/* Common Card Styles */
+.card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Alternating dark-light sections - Ensure these classes are applied in HTML */
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-color-light);
+}
+
+.section-dark {
+    background-color: var(--bg-dark);
+    color: #fff; /* Ensure text is white on dark backgrounds */
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+    color: #fff;
+}
+
+/* Scroll Animation - already handled by main.js and styles.css */
+/* Fade-in and slide-up is applied to sections with JS */
+@keyframes fade-down {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed; /* Fixed to top */
+    background-color: transparent; /* Transparent on hero */
+    box-shadow: none; /* No shadow initially */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--card-bg-light); /* Solid background on scroll */
+    box-shadow: var(--shadow-light); /* Shadow on scroll */
+    backdrop-filter: blur(10px); /* Apply blur on scroll */
+}
+
+@media (prefers-color-scheme: dark) {
+    .navbar.scrolled {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+/* Hamburger menu for mobile with slide-in effect - styles are largely from styles.css, ensure overrides are minimal */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Ensure consistency with global styles for mobile nav */
+        background-color: var(--card-bg-light);
+        box-shadow: var(--shadow-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .nav-links {
+            background-color: var(--card-bg-dark);
+            box-shadow: var(--shadow-dark);
+        }
+    }
+}
+
+/* Page Header (Hero Section for Careers Page) */
+.page-header {
+    background: url('../images/careers-hero.png') no-repeat center center/cover; /* Using a generic hero background for now */
+    position: relative;
+    height: 60vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* For fade-down animation */
+    margin-top: 120px; /* Ensure navbar sits on top */
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: clamp(2.8rem, 1.8rem + 3.5vw, 4.5rem); /* Large, fluid font size */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #fff;
+    animation: fade-down 1s ease-out forwards; /* Fade-down animation */
+    animation-delay: 0.3s;
+    opacity: 0; /* Start invisible for animation */
+}
+
+.page-subtitle {
+    font-size: clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem); /* Smaller, fluid font size */
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300; /* Lighter */
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fade-up 1s ease-out forwards; /* Slide-up animation */
+    animation-delay: 0.6s;
+    opacity: 0; /* Start invisible for animation */
+}
+
+/* Company Culture Section */
+.company-culture {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .culture-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.culture-content h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color-dark);
+}
+
+.culture-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-color-light);
+}
+
+.culture-image .image-placeholder {
+    text-align: center;
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .culture-image .image-placeholder {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.culture-image .image-placeholder:hover {
+    transform: translateY(-5px);
+}
+
+.culture-image img {
+    max-width: 100%;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1rem;
+}
+
+.culture-image p {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.benefit-card {
+    background-color: var(--card-bg-dark);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-dark);
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .benefit-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-dark), 0 0 20px rgba(168, 85, 247, 0.6); /* Accent color glow */
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.2rem;
+    color: #f4eeee;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: rotateY(180deg);
+}
+
+.benefit-card h3 {
+    color: #212020;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1.4rem, 1.1rem + 0.8vw, 1.8rem);
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(26, 26, 26, 0.85);
+}
+
+/* Open Positions Section */
+.open-positions {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.position-card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (prefers-color-scheme: dark) {
+    .position-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.position-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-light), 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+    .position-card:hover {
+        box-shadow: var(--shadow-dark), 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.position-header h3 {
+    color: var(--text-color-dark);
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 1.2rem + 0.8vw, 1.8rem);
+}
+
+.position-type {
+    background-color: var(--primary-light);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.position-details {
+    margin-bottom: 1.5rem;
+    color: var(--text-color-light);
+    font-size: 0.95rem;
+}
+
+.position-details p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.position-details i {
+    margin-right: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.position-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-light);
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.position-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: rgba(88, 174, 255, 0.1);
+    color: var(--primary-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.open-positions .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: var(--border-radius-lg);
+}
+
+/* Application Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+.modal-content {
+    background-color: var(--card-bg-light);
+    margin: auto; /* Center modal */
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    .modal-content {
+        background-color: var(--card-bg-dark);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: var(--text-color-light);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color-dark);
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.2rem);
+}
+
+.modal-content #modalPosition {
+    color: var(--primary-dark);
+}
+
+.application-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.application-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    font-size: 1rem;
+}
+
+.application-form input[type="text"],
+.application-form input[type="email"],
+.application-form input[type="tel"],
+.application-form input[type="url"],
+.application-form select,
+.application-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--bg-light);
+    color: var(--text-color-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .application-form input,
+    .application-form select,
+    .application-form textarea {
+        background-color: #333;
+        border-color: #555;
+        color: #eee;
+    }
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(88, 174, 255, 0.3);
+    outline: none;
+}
+
+.application-form small {
+    color: var(--text-color-light);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.application-form .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.application-form .checkbox-label input[type="checkbox"] {
+    margin-right: 0.6rem;
+    margin-top: 0.2rem;
+    transform: scale(1.05);
+    accent-color: var(--primary-light);
+}
+
+.application-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: var(--border-radius-lg);
+}
+
+/* Contact CTA Section (Careers specific) */
+.contact-cta-section .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-cta-section .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 1rem 3rem;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.contact-cta-section .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease-out;
+    z-index: -1;
+}
+
+.contact-cta-section .btn-secondary:hover::before {
+    width: 100%;
+}
+
+.contact-cta-section .btn-secondary:hover {
+    color: var(--primary-dark);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Footer adjustments (same as contact.css) */
+.footer {
+    background-color: var(--bg-dark);
+    color: #fff;
+    padding: 4rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--primary-light);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments for careers.html */
+@media (max-width: 768px) {
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .positions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: clamp(1.5rem, 1.2rem + 1vw, 1.8rem);
+    }
+
+    .contact-cta-section .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
