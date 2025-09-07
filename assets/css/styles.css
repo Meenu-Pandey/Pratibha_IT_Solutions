@@ -166,14 +166,15 @@ section.visible {
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--text-color-dark);
-    letter-spacing: 0.3rem; /* Using variable for consistency */
+    letter-spacing: 0.3rem;
+    margin-top: 2.2rem; /* Using variable for consistency */
 }
 
 .logo-sub {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--primary-dark);
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.5rem;
      /* Using variable for consistency */
 }
 
